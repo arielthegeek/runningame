@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>runner game</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #opening {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 2;
+        }
+        #gameCanvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="opening">
+        <h1>Coded by Ariel Saks</h1>
+    </div>
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+    <script src="game.js"></script>
+</body>
+</html>
