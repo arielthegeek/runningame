@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>runner game</title>
-    <link rel="icon" href="logo.ico"> <!-- Add this line to reference the icon -->
+    <link rel="icon" href="logo.ico"> <!-- Add this line for the favicon -->
     <style>
         body, html {
             margin: 0;
@@ -21,6 +21,7 @@
         #opening {
             position: absolute;
             display: flex;
+            flex-direction: column; /* Added to align the logo and text vertically */
             justify-content: center;
             align-items: center;
             width: 100%;
@@ -31,10 +32,16 @@
         #gameCanvas {
             border: 1px solid #000;
         }
+        #logo {
+            width: 50px; /* Adjust the width of the logo as needed */
+            height: 50px; /* Adjust the height of the logo as needed */
+            margin-bottom: 20px; /* Added to create space between logo and text */
+        }
     </style>
 </head>
 <body>
     <div id="opening">
+        <img id="logo" src="logo.ico" alt="Logo"> <!-- Add this line for displaying the logo -->
         <h1>Coded by Ariel Saks</h1>
     </div>
     <canvas id="gameCanvas" width="800" height="400"></canvas>

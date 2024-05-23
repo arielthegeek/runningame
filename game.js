@@ -63,10 +63,27 @@ function restartGame() {
 function showOpeningScreen() {
     const openingScreen = document.getElementById('opening');
     setTimeout(() => {
-        openingScreen.style.display = 'none';
-        startGame();
-    }, 5000);
+        openingScreen.innerHTML = '<h1>Coded by Ariel Saks</h1>'; // Display "Coded by Ariel Saks"
+        setTimeout(() => {
+            openingScreen.innerHTML = '<h1>Introducing Skibidi Runner</h1><p>Brought to you by Ariel Games Inc</p>'; // Display "Introducing Skibidi Runner"
+            setTimeout(() => {
+                openingScreen.innerHTML = '<img id="logo" src="logo.ico" alt="Logo">'; // Display the logo
+                openingScreen.innerHTML += '<canvas id="gameCanvas" width="800" height="400"></canvas>'; // Add the canvas
+                
+                // Set the size of the logo
+                const logo = document.getElementById('logo');
+                logo.style.width = '200px'; // Adjust the width as needed
+                logo.style.height = '200px'; // Adjust the height as needed
+
+                setTimeout(() => {
+                    openingScreen.style.display = 'none'; // Hide the opening screen after showing the logo for 2 seconds
+                    startGame(); // Start the game
+                }, 2000);
+            }, 5000); // Display the logo after 5 seconds of showing "Introducing Skibidi Runner"
+        }, 5000); // Display "Introducing Skibidi Runner" after 5 seconds of showing "Coded by Ariel Saks"
+    }, 5000); // Display "Coded by Ariel Saks" for the first 5 seconds
 }
+
 
 function drawSpecialMessage() {
     ctx.fillStyle = 'blue'; // Change the color here if needed
